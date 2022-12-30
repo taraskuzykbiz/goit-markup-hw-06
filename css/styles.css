@@ -250,7 +250,7 @@ a {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
+.backdrop .is-hidden {
   opacity: 1;
   pointer-events: none;
   visibility: hidden;
@@ -275,8 +275,6 @@ a {
 .btn-modal-close:focus {
   background-color: var(--btn-color);
   fill: var(--white-color);
-  transition: border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-modal-close {
@@ -292,6 +290,8 @@ a {
   background: var(--accent-color);
   border: 1px solid rgb(0 0 0 / 0);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg-modal-close {
@@ -347,7 +347,7 @@ a {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input-icon:hover,
@@ -744,10 +744,14 @@ a {
   background-color: var(--success-color);
 }
 
+.form-container {
+  margin-left: auto;
+}
+
 .form-subscribe {
   display: flex;
-  padding-left: 80px;
   gap: 24px;
+  margin-left: auto;
 }
 
 .title-form-container {
@@ -758,8 +762,7 @@ a {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: var(--white-color);
-  padding-left: 80px;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .form-input {
@@ -767,8 +770,9 @@ a {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   width: 264px;
-  height: 40px;
   background-color: var(--title-text-color);
+  height: 40px;
+  color: var(--light-color);
   padding-left: 16px;
 }
 
